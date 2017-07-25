@@ -1,0 +1,45 @@
+<com.fox.pinrenpin.view.ScaledRelativeLayout xmlns:scaledLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/laba_bg2"
+    scaledLayout:heightScale="331"
+    scaledLayout:widthScale="720" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <com.fox.pinrenpin.view.SingleWheelView
+            android:id="@+id/wheel_1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <com.fox.pinrenpin.view.SingleWheelView
+            android:id="@+id/wheel_2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <com.fox.pinrenpin.view.SingleWheelView
+            android:id="@+id/wheel_3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg2_overcut" />
+
+</com.fox.pinrenpin.view.ScaledRelativeLayout>

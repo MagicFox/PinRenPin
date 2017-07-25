@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PinRenPin</string>
+    <string name="score_acount">积分余额:</string>
+    <string name="newlaba_beterror_illegal">请输入数字</string>
+    <string name="newlaba_beterror_toosmall">最低投注50分</string>
+    <string name="newlaba_beterror_toobig">最高投注10万积分</string>
+    <string name="newlaba_beterror_50times">投注分数必须是50的倍数</string>
+    <string name="newlaba_beterror_notenough">您的积分余额不足</string>
+    <string name="newlaba_failed">未中奖，请再接再厉吧</string>
+    <string name="newlaba_coin_reward_num">积分</string>
+    <string name="newlaba_coin_reward_get_coin">立即领取</string>
+    <string name="define">确定</string>
+    <string name="cancel">取消</string>
+</resources>

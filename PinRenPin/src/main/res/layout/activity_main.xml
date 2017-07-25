@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/laba_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/laba_bg1">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:src="@drawable/laba_back_selector" />
+
+            <ImageView
+                android:id="@+id/ivSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:src="@drawable/laba_sound_on_selector" />
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/laba_logo" />
+
+            <com.fox.pinrenpin.view.WinScoreView
+                android:id="@+id/winScore"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp" />
+
+            <com.fox.pinrenpin.view.PlaneView
+                android:id="@+id/plane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.fox.pinrenpin.view.WheelView
+                android:id="@+id/wheel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_newlaba_mytoast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#BB000000"
+                android:gravity="center"
+                android:minWidth="100dip"
+                android:padding="10dip"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:background="@drawable/laba_bg3"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/llProcessBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/ivXp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/laba_xp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ivCoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-2dp"
+                        android:src="@drawable/laba_coin"
+                        android:visibility="invisible" />
+
+                    <com.fox.pinrenpin.view.LabaProgressBarView
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toLeftOf="@id/ivCoin"
+                        android:layout_toRightOf="@id/ivXp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/llInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llProcessBar">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/laba_score_line_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/llBalance"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/laba_mid_score_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/score_acount"
+                                android:textColor="#438EF4"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#438EF4"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <com.fox.pinrenpin.view.DigitalImageEdittText
+                            android:id="@+id/bets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/laba_mid_score_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical|right"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+
+                            android:textColor="#F1D772"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <com.fox.pinrenpin.view.ReduceScoreButton
+
+                        android:id="@+id/reduceScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/llBalance"
+                        android:src="@drawable/laba_reduce_selector" />
+
+                    <com.fox.pinrenpin.view.AddScoreButton
+                        android:id="@+id/addScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/llBalance"
+                        android:src="@drawable/laba_add_selector" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/maxBets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/laba_max_selector" />
+
+
+                <RelativeLayout
+                    android:layout_width="87.5dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/history"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/laba_history_selector"/>
+
+
+                    <com.fox.pinrenpin.view.SubscriptView
+                        android:id="@+id/subscript"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+                <com.fox.pinrenpin.view.GoButton
+                    android:id="@+id/go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/laba_go1"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="11dip"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dip"
+                android:gravity="bottom"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/laba_rule_font"
+                    android:layout_marginRight="5dip" />
+
+                <ImageView
+                    android:id="@+id/game_rule"
+                    android:layout_width="18dip"
+                    android:layout_height="19dip"
+                    android:src="@drawable/game_rule" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:layout_marginRight="10dip"
+                android:layout_marginLeft="8dip"
+                android:src="@drawable/laba_rule_bottom" >
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
